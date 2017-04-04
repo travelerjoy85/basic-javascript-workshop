@@ -8,7 +8,12 @@ function firstLetter(inputString) {
 }
 
 function lastLetter(inputString) {
-   
+   if(inputString){
+       return inputString.slice(-1);
+   }
+   else {
+       return undefined;
+   }
 }
 
 function letterAtPosition(inputString, position) {
