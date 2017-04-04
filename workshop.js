@@ -46,7 +46,30 @@ function multiplyTwoNumbers(num1, num2) {
 }
 
 function calculator(operation, num1, num2) {
-
+    var resultAdd = num1 + num2;
+    var resultSub = num1 - num2;
+    var resultMult = num1 * num2;
+    var resultDiv = num1 / num2;
+    if(isNaN(num1)||isNaN(num2)){
+        return undefined;
+    }
+    else{
+        if(operation === "add"){
+            return resultAdd;
+        }
+        else if(operation === "sub"){
+            return resultSub;
+        }
+        else if(operation === "mult"){
+            return resultMult;
+        }
+        else if(operation === "div"){
+            return resultDiv;
+        }
+        else{
+            return undefined;
+        }
+    }
 }
 
 function repeatString(inputString, numRepetitions) {
