@@ -36,7 +36,13 @@ function addTwoNumbers(num1, num2) {
 }
 
 function multiplyTwoNumbers(num1, num2) {
-
+    var result = num1 * num2;
+    if(isNaN(num1)||isNaN(num2)){
+        return undefined;
+    }
+    else {
+        return num1 * num2;
+    }
 }
 
 function calculator(operation, num1, num2) {
