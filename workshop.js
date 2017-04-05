@@ -125,7 +125,21 @@ function sumOfNumbers(arrayOfNumbers) {
 }
 
 function uniqueElements(array1, array2) {
-
+   if(typeof(array1)==="object" && typeof(array2)==="object"){
+       var unique = [];
+        
+        array1.forEach(function(val){
+           if(array2.indexOf(val)<0) unique.push(val);
+        });
+        
+        array2.forEach(function(val){
+            if(array1.indexOf(val)<0) unique.push(val);
+        });
+        return unique;
+   }
+   else{
+       return undefined;
+   }
 }
 
 function isPalindrome(inputString) {
