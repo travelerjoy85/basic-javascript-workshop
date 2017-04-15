@@ -30,7 +30,12 @@ function letterAtPosition(inputString, position) {
 }
 
 function addTwoNumbers(num1, num2) {
-
+    if(isNaN(num1) || isNaN(num2)){
+        return undefined; // cause if either of num1 and num2 is not a number, it won't pass
+    }
+    else{
+        return num1+num2;
+    }
 }
 
 function multiplyTwoNumbers(num1, num2) {
