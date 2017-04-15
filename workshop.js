@@ -48,7 +48,26 @@ function multiplyTwoNumbers(num1, num2) {
 }
 
 function calculator(operation, num1, num2) {
-
+    if(isNaN(num1) || isNaN(num2)){
+        return undefined; // forgot to define if num1 is not a number or if num2 is not a number at first. Need to remember fron now on
+    }
+    else{
+        if(operation==="add"){
+            return num1+num2;
+        }
+        else if(operation==="sub"){
+            return num1-num2;
+        }
+        else if(operation==="mult"){
+            return num1*num2;
+        }
+        else if(operation==="div"){
+            return num1/num2;
+        }
+        else{
+            return undefined;
+        }
+    }
 }
 
 function repeatString(inputString, numRepetitions) {
