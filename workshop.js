@@ -71,7 +71,21 @@ function calculator(operation, num1, num2) {
 }
 
 function repeatString(inputString, numRepetitions) {
-
+    var result = "";
+    if(isNaN(numRepetitions)){
+        return undefined;
+    }
+    else{
+        if(numRepetitions<=0 || inputString.length===0){
+            return result;
+        }
+        else{
+            for(var i = 0; i < numRepetitions; i++){
+                result += inputString;
+            }
+        }
+        return result;
+    }
 }
 
 function reverseString(inputString) {
