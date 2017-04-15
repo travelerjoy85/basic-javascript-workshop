@@ -21,7 +21,12 @@ function lastLetter(inputString) {
 }
 
 function letterAtPosition(inputString, position) {
-
+    if(inputString){
+        return inputString[position]; // position represents the index number based on the example in the instruction
+    }
+    else{
+        return undefined;
+    }
 }
 
 function addTwoNumbers(num1, num2) {
