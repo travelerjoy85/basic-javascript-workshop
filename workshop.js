@@ -1,5 +1,14 @@
 function firstLetter(inputString) {
-
+// process of thinking:
+// - based on the request in the instruction "If the function receives no parameter...it should", I should have if/else statement:
+// 1. if there's parameter pass to it && the parameter is valid, return the first letter;
+// 2. if not, return undefined
+    if(inputString){
+        return inputString[0];
+    }
+    else{
+        return undefined;
+    }
 }
 
 function lastLetter(inputString) {
