@@ -12,7 +12,12 @@ function firstLetter(inputString) {
 }
 
 function lastLetter(inputString) {
-
+    if(inputString){
+        return inputString[inputString.length-1]; // the index of last letter in a string is str.length-1
+    }
+    else{
+        return undefined;
+    }
 }
 
 function letterAtPosition(inputString, position) {
