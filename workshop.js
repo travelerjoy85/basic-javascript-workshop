@@ -145,7 +145,23 @@ function sumOfNumbers(arrayOfNumbers) {
 }
 
 function uniqueElements(array1, array2) {
-
+     var newArr = [];
+     if(typeof(array1) != "object" || typeof(array2) != "object"){
+         return undefined;
+     }
+     else{
+         for(var i = 0; i < array1.length; i++){
+             if(array2.indexOf(array1[i]) < 0){
+                 newArr.push(array1[i]);
+             }
+         }
+         for(var j = 0; j < array2.length; j++){
+             if(array1.indexOf(array2[j]) < 0){
+                 newArr.push(array2[j]);
+             }
+         }
+         return newArr;
+     }
 }
 
 function isPalindrome(inputString) {
