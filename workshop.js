@@ -89,15 +89,41 @@ function repeatString(inputString, numRepetitions) {
 }
 
 function reverseString(inputString) {
-
+    var finalString = "";
+    for(var i = inputString.length; i > 0; i--){
+        finalString += inputString[i-1];
+    }
+    return finalString;
 }
 
 function longestWord(inputString) {
-
+    var splitString = inputString.split(" ");
+    var longestString = "";
+    if(inputString.length === 0){
+        return "";
+    }
+    else{
+        for(var i = 0; i < splitString.length; i++){
+            if(splitString[i].length > longestString.length){
+                longestString = splitString[i];
+            }
+        }
+        return longestString;
+    }
 }
 
 function capitalize(inputString) {
-
+    var str = inputString.toLowerCase().split(" ");
+    //var temp ="";
+    if(inputString.length === 0){
+        return "";
+    }
+    else{
+        for(var i = 0; i < str.length; i++){
+            str[i]=str[i].charAt(0).toUpperCase()+str[i].slice(1);
+        }
+        return str.join(" ");
+    }
 }
 
 function sumOfNumbers(arrayOfNumbers) {
