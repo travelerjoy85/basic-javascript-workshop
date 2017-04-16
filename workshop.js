@@ -127,7 +127,21 @@ function capitalize(inputString) {
 }
 
 function sumOfNumbers(arrayOfNumbers) {
-
+   var result = 0;
+   if(arrayOfNumbers.length === 0){
+       return 0;
+   }
+   else{
+       for(var i = 0; i < arrayOfNumbers.length; i++){
+           if(!isNaN(arrayOfNumbers[i])){
+               result += arrayOfNumbers[i];
+           }
+           else{
+               return undefined;
+           }
+       }
+       return result;
+   }
 }
 
 function uniqueElements(array1, array2) {
