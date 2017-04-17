@@ -165,11 +165,18 @@ function uniqueElements(array1, array2) {
 }
 
 function isPalindrome(inputString) {
-
+    var strWithoutSpecialCharacter = inputString.replace(/\W/g, '').toLowerCase();
+    var reverseStr = reverseString(strWithoutSpecialCharacter);
+    if(strWithoutSpecialCharacter === reverseStr){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 function wrapCharacter(inputString) {
-
+    var newStr = "";
 }
 
 function wrapWord(inputString) {
